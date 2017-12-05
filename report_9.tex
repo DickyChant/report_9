@@ -37,7 +37,7 @@
     {
       \begin{tabular}{lrrrrrrrrrr}
       所测直径 & \multicolumn{1}{l}{$d_1$} & \multicolumn{1}{l}{$d_2$} & \multicolumn{1}{l}{$d_3$} & \multicolumn{1}{l}{$d_4$} & \multicolumn{1}{l}{$d_5$} & \multicolumn{1}{l}{$d_6$} & \multicolumn{1}{l}{$d_7$} & \multicolumn{1}{l}{$d_8$} & \multicolumn{1}{l}{$d_9$} & \multicolumn{1}{l}{$d_{10}$} \\
-      读数$d_i/mm$    & 0.325 & 0.326 & 0.322 & 0.326 & 0.322 & 0.325 & 0.326 & 0.325 & 0.326 & 0.327 \\
+      读数$d_i/mm$    & 0.315 & 0.316 & 0.312 & 0.316 & 0.312 & 0.315 & 0.316 & 0.315 & 0.316 & 0.317 \\
       \end{tabular}%
     }
     \label{tab:addlabel}%
@@ -250,7 +250,7 @@ B类：$$\sigma=\frac{e+e}{\sqrt{3}}=0.012(mm)$$
 得$k$的不确定度：
 $$\sigma_k=\frac{\sigma}{\sqrt{\sum\limits_{i=0}^9{(m_i-\bar{m})^2}}}=6\times10^{-6}(mm/g)$$
 故：
-$$k\pm \sigma_k=(5.88\pm 6  )\times 10^{-4}(mm/g)$$
+$$k\pm \sigma_k=(5.88\pm 0.06  )\times 10^{-4}(mm/g)$$
 \subsubsection{利用光杠杆测量金属的杨氏模量}
 根据前文所展示的实验数据，可作$\bar{r}$与$m$关系图如下:
 \begin{figure}[H]
@@ -333,10 +333,63 @@ B类：$$\sigma=\frac{e+e}{\sqrt{3}}=0.005(mm)$$
 $$\sigma_k=\frac{\sigma}{\sqrt{\sum\limits_{i=0}^9{(m_i-\bar{m})^2}}}=2\times10^{-5}(mm/g)$$
 故：
 $$k\pm \sigma_k=(-4.14\pm 0.02 )\times 10^{-3}(mm/g)$$
-\subsection{分析与讨论}
-\subsubsection{$\Delta r$偏大}考虑到开始时钢丝没有拉直，因此，最初的一两个砝码会将金属丝拉直，而在这过程中，相应的$\Delta r$也会偏大。
-\subsubsection{$\Delta r$偏小}若开始时，装置的调节未做好，使得下端圆柱与限转螺丝存在摩擦，则最初时刻的$\Delta r$会因存有摩擦力而较小。
+\subsection{分别计算金属的杨氏模量}
+\subsubsection{利用CCD测量金属的杨氏模量}
+原理公式：
+$$E=\frac{4mgL}{\pi d^2 \Delta r}$$
+\paragraph{逐差法计算}
+由于相隔5项逐差，可以将公式改写如下：
+$$E=\frac{4\bar{m}gL}{\pi \bar{d}^2 (\frac{\delta L}5)}=1.68\times 10^{11}(Pa)$$
+各量不确定度如下：
+$$\sigma_m=\sqrt{\frac{\sum\limits_{i=1}^9{(m_i-\bar{m}})^2}{9\times 8}}=0.05(g)$$
+$$\sigma_L=0.06(cm)$$
+对于金属丝直径：
+$$\bar{d}=\frac{1}{10}(\sum_{i=1}^{10}{d_i})-d_0=\bar{d}_{read}-d_0$$
+得：
+$$\sigma_d=\sqrt{\sigma_{d_{read}}^2+\sigma_{d_0}^2}$$
+由于$\sigma_{d_0}$已知，下求$\sigma_{d_{read}}$：
+\\
+A类：$$\sigma_{\bar{d}}=\sqrt{\frac{\sum\limits_{i=1}^{10}{({d_{read}}_i-\bar{d}_{read})^2}}{10\times9}}=0.0005(mm)$$
+B类：$$e_d=\sum\limits_{i=1}^3{\frac{e}3}=0.004(mm)\Rightarrow \sigma=\frac{e}{\sqrt{3}}=0.002(mm)$$
+得总不确定度：$$\sigma_{d_{read}}=\sqrt{\sigma_{\bar{d}}^2+\sigma^2}=0.002(mm)$$
+得：$$\sigma_d=\sqrt{\sigma_{d_{read}}^2+\sigma_{d_0}^2}=0.003(mm)$$
+从而：
+$$\sigma_E=\sqrt{(\frac{\partial E}{\partial \bar{m}})^2\sigma_m^2+(\frac{\partial E}{\partial L})^2\sigma_L^2+(\frac{\partial E}{\partial \bar{d}})^2\sigma_d^2(\frac{\partial E}{\partial{(\frac{\delta L}5)} })^2\sigma_{(\frac{\delta L}5)}^2}=0.03\times 10^{11}(Pa)$$
+故：$$E\pm \sigma_E=(1.68\pm 0.03)\times 10^{11}(Pa)$$
+\paragraph{最小二乘法计算}
+由于斜率已知，可将公式改写如下：
+$$E=\frac{4gL}{\pi \bar{d}^2 k}=1.69\times 10^{11}(Pa)$$
+不确定度计算如下：
+$$\sigma_L=0.06(cm)$$
+$$\sigma_d=\sqrt{\sigma_{d_{read}}^2+\sigma_{d_0}^2}=0.003(mm)$$
+从而：
+$$\sigma_E=\sqrt{+(\frac{\partial E}{\partial L})^2\sigma_L^2+(\frac{\partial E}{\partial \bar{d}})^2\sigma_d^2+(\frac{\partial E}{\partial k })^2\sigma_k^2}=0.01\times 10^{11}(Pa)$$
+故：$$E\pm \sigma_E=(1.69\pm 0.01)\times 10^{11}(Pa)$$
+\subsubsection{利用光杠杆测量金属的杨氏模量}
+原理公式：
+$$E=\frac{8FLR}{\pi d^2 D\Delta r}$$
+\paragraph{逐差法计算}
+由于相隔5项逐差，可以将公式改写如下：
+$$E=\frac{8\bar{m}gLR}{\pi \bar{d}^2 (\frac{\delta L}5 )D}=1.66\times 10^{11}(Pa)$$
+\paragraph{最小二乘法计算}
+由于斜率已知，可将公式改写如下：
+$$E=\frac{8gLR}{\pi \bar{d}^2 kD}=1.65\times 10^{11}(Pa)$$
+\subsubsection{梁的弯曲测量金属的杨氏模量}
+原理公式：
+$$E=\frac{Gl^3}{4 \lambda a h^3}$$
+\paragraph{逐差法计算}
+由于相隔3项逐差，可以将公式改写如下：
+$$E=\frac{\bar{m} g l^3}{4 a h^3 (\frac{\delta \Lambda}3 )}=2.14\times 10^{11}(Pa)$$
+\paragraph{最小二乘法计算}
+由于斜率已知，可将公式改写如下：
+$$E=\frac{gl^3}{4ah^3|k|}=2.14\times 10^{11}(Pa)$$
+
+
+\section{分析与讨论}
+\subsection{$\Delta r$偏大}考虑到开始时钢丝没有拉直，因此，最初的一两个砝码会将金属丝拉直，而在这过程中，相应的$\Delta r$也会偏大。
+\subsection{$\Delta r$偏小}若开始时，装置的调节未做好，使得下端圆柱与限转螺丝存在摩擦，则最初时刻的$\Delta r$会因存有摩擦力而较小。
 \section{收获和感想}
+
 在课下准备本次实验的时候，我其实并没有感到非常紧张。一来，室友已做过这个实验，可以向他取经；二来，我自己在高中也做过这个实验。
 
 但是，真正实际操作的时候，我却并没有像想象中那般轻松。
