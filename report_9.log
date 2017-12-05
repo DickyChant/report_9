@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2017.11.15)  5 DEC 2017 18:12
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2017.11.15)  5 DEC 2017 19:29
 entering extended mode
 **c:/Users/Dicky/Desktop/report_9/report_9
 (c:/Users/Dicky/Desktop/report_9/report_9.tex
@@ -974,35 +974,11 @@ Overfull \hbox (7.85324pt too wide) in paragraph at lines 207--212
 
 File: 2.eps Graphic file (type eps)
 <2.eps> [4] [5]
-
-LaTeX Warning: Command \m invalid in math mode on input line 244.
-
-
-LaTeX Warning: Command \m invalid in math mode on input line 244.
-
-Missing character: There is no ̉ in font cmmi7!
-Missing character: There is no ̉ in font cmmi7!
-File: 1.eps Graphic file (type eps)
-<1.eps> [6] [7]
-
-LaTeX Warning: Command \m invalid in math mode on input line 285.
-
-
-LaTeX Warning: Command \m invalid in math mode on input line 285.
-
-Missing character: There is no ̉ in font cmmi7!
-Missing character: There is no ̉ in font cmmi7!
-File: 1.eps Graphic file (type eps)
-<1.eps> [8] [9]
-
-LaTeX Warning: Command \m invalid in math mode on input line 325.
-
-
-LaTeX Warning: Command \m invalid in math mode on input line 325.
-
-Missing character: There is no ̉ in font cmmi7!
-Missing character: There is no ̉ in font cmmi7!
-[10] [11] (c:\Users\Dicky\Desktop\report_9\report_9.aux)
+File: 2.eps Graphic file (type eps)
+ <2.eps> [6] [7]
+File: 3.eps Graphic file (type eps)
+ <3.eps> [8] [9] [10] [11]
+(c:\Users\Dicky\Desktop\report_9\report_9.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41pt have occurred.
@@ -1015,10 +991,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15796 strings out of 430478
- 326180 string characters out of 3191501
+ 15795 strings out of 430478
+ 326172 string characters out of 3191501
  337192 words of memory out of 3000000
- 18700 multiletter control sequences out of 15000+200000
+ 18699 multiletter control sequences out of 15000+200000
  9897 words of font info for 71 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,12n,36p,873b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
